@@ -1,5 +1,5 @@
 <?php
-    //include "valida-sessao.php";   
+    include "valida-sessao.php";   
 ?>
 <!DOCTYPE html>
 <html lang="en">
