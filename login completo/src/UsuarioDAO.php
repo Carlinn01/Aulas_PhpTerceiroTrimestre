@@ -17,7 +17,6 @@ class UsuarioDAO{
     }
 
     public static function validarUsuario($dados){
-        echo ">>>>>>>>>>>>>>>>>>>>>>>>>>>>> ";
         
         $senhaCriptografada = md5($dados['senha']);
         $sql = "select * from usuarios where email=? AND senha=?";
@@ -28,8 +27,6 @@ class UsuarioDAO{
         $stmt->bindParam(2, $senhaCriptografada);
         $stmt->execute();
         
-        echo ">>>>>>>>>> ";
-        var_dump($stmt);
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 }
